@@ -90,7 +90,7 @@ const Questionnaire = () => {
     // Add title
     doc.setTextColor.apply(doc, titleStyle.textColor);
     doc.setFontSize(titleStyle.fontSize);
-    doc.text("EyeZen", subtitleX, 10);
+    doc.text("VisioEase", subtitleX, 10);
 
     // Add subtitle centered horizontally
     doc.setTextColor(0); // Reset text color to black
@@ -127,7 +127,7 @@ const Questionnaire = () => {
     // Add footer
     doc.setTextColor.apply(doc, footerStyle.textColor);
     doc.setFontSize(footerStyle.fontSize);
-    doc.text("EyeZen Infant Vision Test", 10, 280);
+    doc.text("VisioEase Infant Vision Test", 10, 280);
 
     // Save the PDF or open it in a new tab
     doc.save("infant_vision_test_results.pdf");

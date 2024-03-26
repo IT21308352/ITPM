@@ -271,7 +271,7 @@ const Navbar = () => {
             : "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray bg-white ease-in-out duration-500 md:hidden"
         }
       >
-        <h1 className="text-2xl font-bold m-8 text-[#004AAD]">EyeZen</h1>
+        <h1 className="text-2xl font-bold m-8 text-[#004AAD]">VisioEase</h1>
         <ul className="p-4 mt-20">
           <li className="p-4 border-b border-gray-600">
             <Link

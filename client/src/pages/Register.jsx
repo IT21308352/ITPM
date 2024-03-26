@@ -14,7 +14,7 @@ const Register = () => {
   const onFinish = async (values) => {
     try {
       const result = await Swal.fire({
-        title: "Do you want to Register With EyeZen",
+        title: "Do you want to Register With VisioEase",
         showDenyButton: true,
         confirmButtonText: "Yes",
         denyButtonText: "No",
@@ -28,7 +28,7 @@ const Register = () => {
           password: values.password,
         });
         Swal.fire(
-          "Congratulations! You Have Successfully Registered with EyeZen",
+          "Congratulations! You Have Successfully Registered with VisioEase",
           "",
           "success"
         );
