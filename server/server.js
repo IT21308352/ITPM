@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv").config();
 const cookieParser = require("cookie-parser");
 
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -22,10 +23,13 @@ const userRoutes = require("./routes/userRoutes");
 
 const base = "/api/";
 
+const commentRoute = require("./routes/commentRoutes")
+
 
 
 
 app.use("/api",userRoutes)
+app.use("/api", commentRoute)
 
 
 

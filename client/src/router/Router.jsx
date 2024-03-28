@@ -29,6 +29,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import { AuthContext } from "../context/authContext";
 import Profile from "../pages/Profilepage";
+import CommentSection from "../pages/CommentPage"
 
 const Router = () => {
   const ProtectedRoute = ({ children }) => {
@@ -49,7 +50,7 @@ const Router = () => {
       {/* Handle a 404 Not Found route */}
       <Route path="*" element={<NotFound />} />
       <Route path="/profile/:id" element={<Profile />} />
-      
+      <Route path="/comment" element={<CommentSection />} />     
 
 
       
