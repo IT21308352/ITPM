@@ -24,10 +24,10 @@ const userRoutes = require("./routes/userRoutes");
 const base = "/api/";
 
 const commentRoute = require("./routes/commentRoutes")
+const doctorRoutes = require("./routes/doctorRoutes");
 
 
-
-
+app.use("/api/doctors", doctorRoutes);
 app.use("/api",userRoutes)
 app.use("/api", commentRoute)
 

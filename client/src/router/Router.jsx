@@ -9,17 +9,22 @@ import InfantQuizHome from "../pages/infantQuiz/HomePage";
 import CreateFact from "../pages/infantQuiz/InfantFact";
 import InfantQuiz from "../pages/infantQuiz/InfantQuiz";
 import Home from "../pages/Home";
+import DoctorForm from "../pages/adminForms/DoctorForm";
+import AdminDoctorList from "../pages/adminForms/AdminDoctorList";
+import UpdateDoctor from "../pages/adminForms/UpdateDoctor";
+
 
 import SightedText from "../pages/vision Tests/sighted-test/SightedText";
 import NearSightedTestView from "../pages/vision Tests/sighted-test/NearSightedTestView";
 import SightPass from "../pages/vision Tests/sighted-test/EyeSightedPass";
-import SightFail from "../pages/vision Tests/sighted-test/EyeSightedFail";
+import SightFail from "../pages/vision Tests/sighted-test/EyeSightedFail";  
 import AddTextForm from "../pages/vision Tests/sighted-test/AddTextForm";
 import NearSightedTextResult from "../pages/vision Tests/sighted-test/NearSightedResult";
 import Questionnaire from "../pages/infantQuiz/Questionnaire";
 import CreateQuizQuestion from "../pages/infantQuiz/CreateQuiz";
 import ViewQuiz from "../pages/infantQuiz/ViewQuiz";
 import AllTestHome from "../pages/vision Tests/AllTestHome";
+import AdminHome from "../pages/adminForms/AdminHome";
 
 
 //import NearSighted from "../pages/sighted-test/SightedText";
@@ -30,6 +35,10 @@ import Register from "../pages/Register";
 import { AuthContext } from "../context/authContext";
 import Profile from "../pages/Profilepage";
 import CommentSection from "../pages/CommentPage"
+import DoctorContactHome from "../pages/doctorContactHome/DoctorContactHome";
+import DoctorList from "../pages/doctorContactHome/DoctorList";
+import DoctorDetails from "../pages/doctorContactHome/DoctorDetails";
+import Map from "../pages/doctorContactHome/Map";
 
 const Router = () => {
   const ProtectedRoute = ({ children }) => {
@@ -50,7 +59,37 @@ const Router = () => {
       {/* Handle a 404 Not Found route */}
       <Route path="*" element={<NotFound />} />
       <Route path="/profile/:id" element={<Profile />} />
-      <Route path="/comment" element={<CommentSection />} />     
+      <Route path="/comment" element={<CommentSection />} />    
+       {/* Doctor contact home Page */}
+       <Route path="/doctorContact" element={<DoctorContactHome />} />
+       {/* Admin Doctor List */}
+      <Route path="/adminDoctorList" element={<AdminDoctorList />} />
+      <Route
+        path="/admin"
+        element={
+          <ProtectedRoute>
+            <AdminHome />
+          </ProtectedRoute>
+        }
+      />
+
+{/* Admin Doctor Update */}
+<Route path="/update-doctor/:email" element={<UpdateDoctor />} />
+
+{/* Doctor List Page */}
+<Route path="/doctorContact/doctorList" element={<DoctorList />} />
+
+{/* Doctor Page */}
+<Route path="/doctor/:email" element={<DoctorDetails />} />
+
+{/* Doctor map Page */}
+<Route path="/doctorContact/doctorMap" element={<Map />} />
+
+{/* Admin Treatment Update */}
+
+{/* Doctor Form */}
+<Route path="/doctorForm" element={<DoctorForm />} />
+
 
 
       
